@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESENVOLVIMENTO WEB</title>
+    <link rel="icon" type="image/png" href="img/web.png.png">
+    <link rel="stylesheet" href="stlye.css">
+</head>
+<body>
+    <header>
+        <h1>DESENVOLVIMENTO WEB</h1>
+         <nav>
+            <ul>
+                <li><a href="#arquitetura">Arquitetura</a></li>
+                <li><a href="#infraestrutura">Hospedagem</a></li>
+                <li><a href="#http">HTTP</a></li>
+                <li><a href="#api">APIs & Git</a></li>
+                <li><a href="#css">Estilização com CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="arquitetura">
+            <h2>1. Arquitetura de Sistemas Computacionais</h2>
+            
+            <article>
+                <h3>1.1. Qual a diferença entre o modelo Centralizado e o Distribuído?</h3>
+                <p>No modelo <strong>Centralizado</strong> (mainframes), todo o processamento ocorre em um único servidor central acessado por terminais. Já no modelo <strong>Distribuído</strong> (Cliente-Servidor), as tarefas são divididas: o cliente cuida da interface e o servidor processa a lógica de negócio e banco de dados.</p>
+            </article>
+
+            <article>
+                <h3>1.2. Cite duas outras arquiteturas de sistemas e suas funções:</h3>
+                <ul>
+                    <li><strong>Peer-to-Peer (P2P):</strong> Todos os nós agem como cliente e servidor simultaneamente (ex: BitTorrent).</li>
+                    <li><strong>CDN (Content Delivery Network):</strong> Servidores geograficamente distribuídos para acelerar a entrega de conteúdo estático.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="infraestrutura">
+            <h2>2. Infraestrutura Web e Hospedagem</h2>
+
+            <article>
+                <h3>2.1. Como funciona a analogia do Domínio, IP e DNS?</h3>
+                <p>O <strong>IP</strong> é a coordenada geográfica do servidor, o <strong>Domínio</strong> é o endereço memorável (ex: site.com) e o <strong>DNS</strong> funciona como o GPS que converte o domínio no IP correto.</p>
+            </article>
+
+            <article>
+                <h3>2.2. Quais são os principais tipos de hospedagem?</h3>
+                <ol>
+                    <li><strong>Compartilhada:</strong> Vários sites dividem recursos no mesmo servidor.</li>
+                    <li><strong>VPS:</strong> Servidor fatiado em máquinas virtuais dedicadas.</li>
+                    <li><strong>Dedicada:</strong> Um servidor físico exclusivo para o cliente.</li>
+                    <li><strong>Nuvem (Cloud):</strong> Recursos distribuídos e escaláveis sob demanda.</li>
+                </ol>
+            </article>
+        </section>
+        <section id="http">
+            <h2>3. O Protocolo HTTP</h2>
+
+            <article>
+                <h3>3.1. Quais são os métodos HTTP fundamentais?</h3>
+                <ul>
+                    <li><code>GET:</code> Consulta/solicita dados.</li>
+                    <li><code>POST:</code> Envia dados para criar um novo recurso.</li>
+                    <li><code>PUT/PATCH:</code> Atualizam recursos existentes.</li>
+                    <li><code>DELETE:</code> Remove um recurso do servidor.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>3.2. Exemplo de chamada e resposta com códigos de status:</h3>
+                <pre><code class="codigo">
+                    // Exemplo de Códigos de Status Comuns:
+                    // 200 OK - Sucesso
+                    // 201 Created - Recurso criado com sucesso
+                    // 400 Bad Request - Requisição inválida 
+                    ou dados incorretos
+                    // 404 Not Found - Recurso não encontrado
+                    // 429 Too Many Requests - Limite de requisições excedido
+                    // 500 Internal Server Error - Erro interno do servidor
+                    // 501 Not Implemented - Funcionalidade não suportada 
+                    ou não implementada pelo servidor
+                </code></pre>
+            </article>
+        </section>
+        <section id="api">
+            <h2>4. APIs, DevTools e Git</h2>
+
+            <article>
+                <h3>4.1. O que é JSON e qual sua importância?</h3>
+                <p>O <strong>JSON</strong> (JavaScript Object Notation) é o formato padrão chave/valor usado no consumo de APIs para troca leve de dados entre cliente e servidor.</p>
+                <pre><code class="codigo">
+                    {"tema": "Arquitetura Web",
+                     "status": 200,
+                     "autor": "Isabelle Cristine Kanzler"}
+                </code></pre>
+            </article>
+
+            <article>
+                <h3>4.2. Qual a diferença entre Git e GitHub?</h3>
+                <p>O <strong>Git</strong> é a ferramenta de controle de versão instalada localmente na máquina. O <strong>GitHub</strong> é a plataforma na nuvem para hospedar e compartilhar repositórios Git.</p>
+            </article>
+        </section>
+        <section id="css">
+            <h2>5. Estilização com CSS</h2>
+
+            <article>
+                <h3>5.1. O que é CSS e qual é o seu papel na Web?</h3>
+                <p>O <strong>CSS</strong> (Cascading Style Sheets) é a linguagem responsável pelo visual, layout e design das páginas web. Enquanto o HTML define a estrutura dos elementos, o CSS controla a apresentação (cores, fontes, espaçamentos e responsividade).</p>
+            </article>
+
+            <article>
+                <h3>5.2. Como funciona a regra da Cascata e a Especificidade?</h3>
+                <p>A <strong>Cascata</strong> determina que, quando há regras conflitantes, a última declarada no arquivo costuma prevalecer. A <strong>Especificidade</strong> é o peso de cada seletor: seletores por ID têm maior peso que por Classe, que por sua vez superam seletores por Tag/Elemento.</p>
+            </article>
+
+            <article>
+                <h3>5.3. O que é o Box Model: Padding vs. Margin?</h3>
+                <p>No CSS, todo elemento HTML é tratado como uma caixa composta por camadas:</p>
+                <ul>
+                    <li><strong>Content:</strong> O conteúdo real (texto, imagem, etc.).</li>
+                    <li><strong>Padding (Espaçamento Interno):</strong> É o espaço dentro do elemento, entre o conteúdo e a sua borda. Exemplo: <code>padding: 20px;</code> em um botão impede que o texto fique colado nas bordas.</li>
+                    <li><strong>Border:</strong> A linha da borda que envolve o elemento.</li>
+                    <li><strong>Margin (Espaçamento Externo):</strong> É o espaço fora do elemento, criado em volta da sua borda para afastar esse elemento de outros vizinhos na tela. Exemplo: <code>margin: auto;</code> em uma imagem centraliza a caixa afastando os lados igualmente.</li>
+                </ul>
+                <p><strong>Sintaxe de relógio (Sentido Horário):</strong></p>
+                <ul>
+                    <li><code>margin: 10px 20px 15px 5px;</code> &rarr; Topo (10px), Direita (20px), Baixo (15px), Esquerda (5px).</li>
+                    <li><code>margin: 15px 10px;</code> &rarr; Vertical (15px topo/baixo), Horizontal (10px lados).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>5.4. Elementos e Pseudo-elementos (::) no CSS</h3>
+                <p>Um elemento HTML é a tag da estrutura (<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code>). No CSS, o <strong>Seletor de Tag</strong> aplica a regra a todas as tags daquele tipo (ex: <code>p { color: red; }</code> deixa todos os parágrafos vermelhos).</p>
+                <p>Os <strong>Pseudo-elementos (::)</strong> permitem estilizar partes virtuais ou internas de um elemento que não possuem uma tag própria no HTML:</p>
+                <ul>
+                    <li><code>::first-letter</code> &rarr; Altera apenas a primeira letra de um texto.</li>
+                    <li><code>::first-line</code> &rarr; Altera a primeira linha inteira do parágrafo.</li>
+                    <li><code>::before</code> e <code>::after</code> &rarr; Inserem conteúdo decorativo antes ou depois do elemento (ex: colocar um ícone de "+" ao final de um link).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>5.5. Pseudo-classes (:) no CSS</h3>
+                <p>As <strong>Pseudo-classes (:)</strong> servem para alterar o estilo visual de um elemento de acordo com o seu estado ou com a interação do usuário:</p>
+                <ul>
+                    <li><code>:hover</code> &rarr; Aplica o estilo quando o usuário passa o ponteiro do mouse por cima do elemento (ex: mudar a cor ou remover o sublinhado de um link).</li>
+                    <li><code>:focus</code> &rarr; Aplica o estilo quando o elemento recebe foco (ex: quando o usuário clica dentro de uma caixa de texto <code>&lt;input&gt;</code> para digitar).</li>
+                    <li><code>:active</code> &rarr; Aplica o estilo no exato momento em que o elemento é clicado.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>5.6. Principais técnicas de Layout: Flexbox e Grid</h3>
+                <ul>
+                    <li><strong>Flexbox (1D):</strong> Ideal para alinhar itens em uma única direção (linha ou coluna). Perfeito para menus de navegação, centralizar elementos e listas.</li>
+                    <li><strong>CSS Grid (2D):</strong> Ideal para estruturas bidimensionais (linhas e colunas simultaneamente). Perfeito para criar a estrutura geral da página e layouts complexos.</li>
+                </ul>
+            </article>
+        </section>    
+</body>    
+    <footer>
+        <p>Desenvolvido pela aluna Isabelle Cristine Kanzler</p>
+    </footer>
+</html>
